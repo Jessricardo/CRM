@@ -4,6 +4,7 @@ using Android.OS;
 using System.Linq;
 using Android.Views;
 using System.Collections.Generic;
+using Android.Content;
 
 namespace ListaUsuarios.Droid
 {
@@ -26,6 +27,8 @@ namespace ListaUsuarios.Droid
 		}
 		void MyListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
+			Intent intento= new Intent(this, typeof(Detalle));
+			intento.PutExtra("contacto",contactsItems[e.Position].contactId);
 			StartActivity(typeof(Detalle));
 		}
 

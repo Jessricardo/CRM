@@ -16,11 +16,23 @@ namespace ListaUsuarios.Droid
 	[Activity(Label = "Detalles")]
 	public class Detalle : Activity
 	{
+		IContactRepository repo;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Detalle);
 			// Create your application here
+			int id = Intent.GetIntExtra("contacto",0);
+			if (id > 0)
+			{
+				Contact contacto = repo.readById(id);
+				var nombre = FindViewById<TextView>(Resource.Id.txtNombre);
+				var clase = FindViewById<TextView>(Resource.Id.txtClase);
+				var telefono = FindViewById<TextView>(Resource.Id.txtNumero);
+				nombre.Text = contacto.contactName;
+				clase.Text = contacto.contactClass;
+				telefono.Text = contacto.contactCellphone;
+			}
 		}
 	}
 }

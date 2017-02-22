@@ -50,23 +50,23 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f040000
 			public const int textView1 = 2130968576;
 			
-			// aapt resource value: 0x7f040001
-			public const int textView2 = 2130968577;
-			
 			// aapt resource value: 0x7f040002
 			public const int textView3 = 2130968578;
-			
-			// aapt resource value: 0x7f040003
-			public const int textView4 = 2130968579;
 			
 			// aapt resource value: 0x7f040004
 			public const int textView5 = 2130968580;
 			
-			// aapt resource value: 0x7f040005
-			public const int textView6 = 2130968581;
-			
 			// aapt resource value: 0x7f040007
 			public const int textView_contact_name = 2130968583;
+			
+			// aapt resource value: 0x7f040003
+			public const int txtClase = 2130968579;
+			
+			// aapt resource value: 0x7f040001
+			public const int txtNombre = 2130968577;
+			
+			// aapt resource value: 0x7f040005
+			public const int txtNumero = 2130968581;
 			
 			static Id()
 			{

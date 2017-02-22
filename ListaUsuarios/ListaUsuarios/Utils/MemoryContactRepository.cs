@@ -12,6 +12,7 @@ namespace ListaUsuarios
 			contacts = new List<Contact>();
 			contacts.Add(new Contact()
 			{
+				contactId = 1,
 				contactName = "Jose Luis",
 				contactStreet = "Random St",
 				contactEmail = "some@email.com",
@@ -19,6 +20,7 @@ namespace ListaUsuarios
 			});
 			contacts.Add(new Contact()
 			{
+				contactId = 2,
 				contactName = "Yeratzy Espinoza",
 				contactStreet = "Other Random St",
 				contactEmail = "someother@email.com",
