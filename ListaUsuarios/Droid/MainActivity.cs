@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace ListaUsuarios.Droid
 {
-	[Activity(Label = "ListaUsuarios", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(Label = "Sistema CRM", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity 
 	{
 		IContactRepository contacts;
@@ -22,9 +22,12 @@ namespace ListaUsuarios.Droid
 			contacts = new MemoryContactRepository();
 			contactsItems = contacts.Read();
 			list.Adapter = new ContactsAdapter(this, contactsItems);
-
+			list.ItemClick += MyListView_ItemClick;
 		}
-
+		void MyListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+		{
+			StartActivity(typeof(Detalle));
+		}
 
 	}
 }

@@ -46,8 +46,6 @@ namespace ListaUsuarios.Droid
 				view = context.LayoutInflater.Inflate(Resource.Layout.SingleContactView, null);
 		
 			view.FindViewById<TextView>(Resource.Id.textView_contact_name).Text = items[position].contactName;
-			view.FindViewById<TextView>(Resource.Id.textView_contact_class).Text = items[position].contactClass;
-
 			return view;
 		}
 

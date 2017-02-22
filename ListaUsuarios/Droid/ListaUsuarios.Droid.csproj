@@ -55,6 +55,8 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ContactsAdapter.cs" />
+    <Compile Include="SingleContactView.cs" />
+    <Compile Include="Detalle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -68,7 +70,8 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\layout\SingleContactView.xml" />
+    <AndroidResource Include="Resources\layout\SingleContactView.axml" />
+    <AndroidResource Include="Resources\layout\Detalle.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\values\" />
