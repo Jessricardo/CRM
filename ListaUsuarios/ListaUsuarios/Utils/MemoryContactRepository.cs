@@ -13,7 +13,7 @@ namespace ListaUsuarios
 			contacts.Add(new Contact()
 			{
 				contactId = 1,
-				contactName = "Jose Luis",
+				contactName = "Jesús Apodaca",
 				contactStreet = "Random St",
 				contactEmail = "some@email.com",
 				contactClass = "Contact",
@@ -21,7 +21,7 @@ namespace ListaUsuarios
 			contacts.Add(new Contact()
 			{
 				contactId = 2,
-				contactName = "Yeratzy Espinoza",
+				contactName = "Jesús Abraham",
 				contactStreet = "Other Random St",
 				contactEmail = "someother@email.com",
 				contactClass = "Contact",

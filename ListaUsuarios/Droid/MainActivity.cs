@@ -24,6 +24,9 @@ namespace ListaUsuarios.Droid
 			contactsItems = contacts.Read();
 			list.Adapter = new ContactsAdapter(this, contactsItems);
 			list.ItemClick += MyListView_ItemClick;
+
+
+
 		}
 		void MyListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
