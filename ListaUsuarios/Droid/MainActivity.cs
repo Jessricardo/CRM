@@ -29,7 +29,7 @@ namespace ListaUsuarios.Droid
 		{
 			Intent intento= new Intent(this, typeof(Detalle));
 			intento.PutExtra("contacto",contactsItems[e.Position].contactId);
-			StartActivity(typeof(Detalle));
+			StartActivity(intento);
 		}
 
 	}
