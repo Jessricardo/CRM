@@ -92,7 +92,7 @@
         </scene>
         <scene sceneID="169">
             <objects>
-                <tableViewController id="170" sceneMemberID="viewController">
+                <tableViewController id="170" sceneMemberID="viewController" customClass="TableViewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="171">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,12 +112,33 @@
                             <outlet property="delegate" destination="170" id="173"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" id="214" systemItem="bookmarks"/>
+                    <tabBarItem key="tabBarItem" id="214" systemItem="contacts"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tvUsuarios" destination="171" id="name-outlet-171"/>
+                        <segue id="272" destination="230" kind="show" identifier="segueUser"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="176" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="-551"/>
+            <point key="canvasLocation" x="627" y="-517"/>
+        </scene>
+        <scene sceneID="229">
+            <objects>
+                <viewController id="230" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="227"/>
+                        <viewControllerLayoutGuide type="bottom" id="228"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="231">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="232" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136" y="-517"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
