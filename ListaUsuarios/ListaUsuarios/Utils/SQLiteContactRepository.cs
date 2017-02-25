@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using SQLite;
+using System.Linq;
 
 namespace ListaUsuarios
 {
@@ -11,24 +12,24 @@ namespace ListaUsuarios
 		private SQLiteConnection db;
 		public SQLiteContactRepository(string path)
 		{
-			PATH = path;
-			db = new SQLiteConnection(PATH);
-		}
+            PATH = path;
+            db = new SQLiteConnection(PATH);
+            db.CreateTable<Contact>();
+        }
 		public void Crear(Contact c)
 		{
-			throw new NotImplementedException();
+            db.Insert(c);
 		}
 
 		public void Delete(Contact c)
 		{
-			throw new NotImplementedException();
+            db.Delete(c);
 		}
 
 		public List<Contact> Read()
 		{
-			//var table = db.Table<Contacto>();
-			//return table.Select(c => c).ToList();
-			throw new NotImplementedException();
+			var table = db.Table<Contact>();
+			return table.Select(c => c).ToList();
 		}
 
 		public Contact readById(int id)
