@@ -1,16 +1,20 @@
 ﻿using System;
 using Foundation;
 using UIKit;
+using System.Collections; 
 
 namespace ListaUsuarios.iOS
 {
 	public partial class TableSourceViewController : UITableViewSource
 	{
 
-		string[] TableItems;
+		Contact[] TableItems;
+		NSDictionary a = new NSDictionary { };
+		IList b;
+
 		string CellIdentifier = "TableCell";
 		TableViewController owner;
-		public TableSourceViewController(string[] items, TableViewController owner)
+		public TableSourceViewController(Contact[] items, TableViewController owner)
 		{
 			TableItems = items;
 			this.owner = owner;
@@ -23,16 +27,16 @@ namespace ListaUsuarios.iOS
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
-			
+
 			UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
 
-			string item = TableItems[indexPath.Row];
+			Contact item = TableItems[indexPath.Row];
 
 			//---- if there are no cells to reuse, create a new one
 			if (cell == null)
 			{ cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier); }
 
-			cell.TextLabel.Text = item;
+			cell.TextLabel.Text = item.nombre;
 			cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
 
 			return cell;
@@ -40,7 +44,7 @@ namespace ListaUsuarios.iOS
 
 		public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 		{
-			UIAlertController okAlertController = UIAlertController.Create("Fila seleccionada", TableItems[indexPath.Row], UIAlertControllerStyle.Alert);
+			UIAlertController okAlertController = UIAlertController.Create("Fila seleccionada", TableItems[indexPath.Row].nombre, UIAlertControllerStyle.Alert);
 			okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
 			tableView.DeselectRow(indexPath, true);
@@ -50,7 +54,7 @@ namespace ListaUsuarios.iOS
 
 		public override void AccessoryButtonTapped(UITableView tableView, NSIndexPath indexPath)
 		{
-			UIAlertController okAlertController = UIAlertController.Create("Contacto seleccionado", TableItems[indexPath.Row], UIAlertControllerStyle.Alert);
+			UIAlertController okAlertController = UIAlertController.Create("Contacto seleccionado", TableItems[indexPath.Row].nombre, UIAlertControllerStyle.Alert);
 			okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 			owner.PresentViewController(okAlertController, true, null);
 
@@ -62,7 +66,7 @@ namespace ListaUsuarios.iOS
 			{
 				case UITableViewCellEditingStyle.Delete:
 					// remove the item from the underlying data source
-					TableItems.RemoveAt(indexPath.Row);
+
 					// delete the row from the table
 					tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
 					break;
@@ -82,4 +86,3 @@ namespace ListaUsuarios.iOS
 
 	}
 }
-
