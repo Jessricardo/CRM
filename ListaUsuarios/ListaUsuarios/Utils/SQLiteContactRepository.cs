@@ -34,10 +34,10 @@ namespace ListaUsuarios
 
 		public Contact readById(int id)
 		{
-			throw new NotImplementedException();
+			return db.Table<Contact>().FirstOrDefault(t => t.contactId == id);
 		}
 
-		public void Update(Contact c)
+		public void Update(Contact c) 
 		{
 			throw new NotImplementedException();
 		}

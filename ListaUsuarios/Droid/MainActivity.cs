@@ -27,10 +27,12 @@ namespace ListaUsuarios.Droid
             xd.contactName = "Jose";
             xd.contactClass = "Perez";
             xd.contactCellphone = "667895";
+			xd.contactId = 1;
             db.Crear(xd);
 
             contactsItems = db.Read();
 			list.Adapter = new ContactsAdapter(this, contactsItems);
+
 			list.ItemClick += MyListView_ItemClick;
             
            

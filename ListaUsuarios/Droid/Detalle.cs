@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -16,7 +17,7 @@ namespace ListaUsuarios.Droid
 	[Activity(Label = "Detalles")]
 	public class Detalle : Activity
 	{
-		
+		IContactRepository db;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -25,8 +26,9 @@ namespace ListaUsuarios.Droid
 			int id = Intent.GetIntExtra("contacto",0);
 			if (id > 0)
 			{
-				MemoryContactRepository repo = new MemoryContactRepository();
-				Contact contacto = repo.readById(id);
+				string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbCRM.db3");
+				db = new SQLiteContactRepository(dbPath);
+				Contact contacto = db.readById(id);
 				TextView nombre = FindViewById<TextView>(Resource.Id.txtNombre);
 				TextView clase = FindViewById<TextView>(Resource.Id.txtClase);
 				TextView telefono = FindViewById<TextView>(Resource.Id.txtNumero);
