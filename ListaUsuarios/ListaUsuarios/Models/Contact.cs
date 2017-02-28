@@ -6,7 +6,7 @@ namespace ListaUsuarios
 	//Entity
 	public class Contact
 	{
-		[PrimaryKey, AutoIncrement]
+		[SQLite.PrimaryKey, SQLite.AutoIncrement]
 		public int contactId{	get;	set;}
 		public string contactName {	get;	set;}
 		public string contactEmail { get; set; }

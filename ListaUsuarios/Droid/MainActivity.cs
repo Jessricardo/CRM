@@ -22,14 +22,6 @@ namespace ListaUsuarios.Droid
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbCRM.db3");
             db = new SQLiteContactRepository(dbPath);
             var list = this.FindViewById<ListView>(Resource.Id.list);
-
-            Contact xd = new Contact();
-            xd.contactName = "Jose";
-            xd.contactClass = "Perez";
-            xd.contactCellphone = "667895";
-			xd.contactId = 1;
-            db.Crear(xd);
-
             contactsItems = db.Read();
 			list.Adapter = new ContactsAdapter(this, contactsItems);
 
