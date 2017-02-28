@@ -18,6 +18,8 @@ namespace ListaUsuarios.Droid
 	public class Detalle : Activity
 	{
 		IContactRepository db;
+		Button btnEliminar;
+		Contact contacto;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -28,7 +30,7 @@ namespace ListaUsuarios.Droid
 			{
 				string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbCRM.db3");
 				db = new SQLiteContactRepository(dbPath);
-				Contact contacto = db.readById(id);
+				contacto = db.readById(id);
 				TextView nombre = FindViewById<TextView>(Resource.Id.txtNombre);
 				TextView clase = FindViewById<TextView>(Resource.Id.txtClase);
 				TextView telefono = FindViewById<TextView>(Resource.Id.txtNumero);
@@ -36,6 +38,14 @@ namespace ListaUsuarios.Droid
 				clase.Text = contacto.contactClass;
 				telefono.Text = contacto.contactCellphone;
 			}
+			btnEliminar = FindViewById<Button>(Resource.Id.btnEliminar);
+			btnEliminar.Click += delegate
+			{
+				db.Delete(contacto);
+				Toast.MakeText(this, "¡Eliminado!", ToastLength.Long).Show();
+				StartActivity(typeof(MainActivity));
+			};
 		}
-	}
+
+}
 }
