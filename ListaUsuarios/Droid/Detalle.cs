@@ -37,6 +37,7 @@ namespace ListaUsuarios.Droid
 				nombre.Text = contacto.contactName;
 				clase.Text = contacto.contactClass;
 				telefono.Text = contacto.contactCellphone;
+
 			}
 			btnEliminar = FindViewById<Button>(Resource.Id.btnEliminar);
 			btnEliminar.Click += delegate
