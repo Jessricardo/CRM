@@ -11,8 +11,8 @@ using UIKit;
 
 namespace ListaUsuarios.iOS
 {
-    [Register ("TableViewController")]
-    partial class TableViewController
+    [Register ("TableContactViewController")]
+    partial class TableContactViewController
     {
         void ReleaseDesignerOutlets ()
         {

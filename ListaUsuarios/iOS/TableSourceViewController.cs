@@ -15,8 +15,8 @@ namespace ListaUsuarios.iOS
 
 
 		string CellIdentifier = "TableCell";
-		TableViewController owner;
-		public TableSourceViewController(List<Contact> items, TableViewController owner)
+		UIViewController owner;
+		public TableSourceViewController(List<Contact> items, UIViewController owner)
 		{
 			TableItems = items;
 			this.owner = owner;
@@ -49,11 +49,14 @@ namespace ListaUsuarios.iOS
 
 		public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 		{
-			UIAlertController okAlertController = UIAlertController.Create("Fila seleccionada", TableItems[indexPath.Row].nombre, UIAlertControllerStyle.Alert);
-			okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-
+			//UIAlertController okAlertController = UIAlertController.Create("Fila seleccionada", TableItems[indexPath.Row].nombre, UIAlertControllerStyle.Alert);
+			//okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+			detalleContacto next = owner.Storyboard.InstantiateViewController("detalleContacto") as detalleContacto;
+			Console.WriteLine(">>>"+TableItems[indexPath.Row].nombre);
+			next.nombre = TableItems[indexPath.Row].nombre;
+			owner.NavigationController.PushViewController(next,true);
 			tableView.DeselectRow(indexPath, true);
-			owner.PresentViewController(okAlertController, true, null);
+			//owner.PresentViewController(okAlertController, true, null);
 
 		}
 

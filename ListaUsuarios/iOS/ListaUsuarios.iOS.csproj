@@ -136,6 +136,14 @@
     <Compile Include="detallesContacts.designer.cs">
       <DependentUpon>detallesContacts.cs</DependentUpon>
     </Compile>
+    <Compile Include="detalleContacto.cs" />
+    <Compile Include="detalleContacto.designer.cs">
+      <DependentUpon>detalleContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableContactViewController.cs" />
+    <Compile Include="TableContactViewController.designer.cs">
+      <DependentUpon>TableContactViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
