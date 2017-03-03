@@ -144,6 +144,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="TableSourceViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -156,6 +157,27 @@
     <Compile Include="ViewController.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewController.cs" />
+    <Compile Include="TableViewController.designer.cs">
+      <DependentUpon>TableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableSourceViewController.cs" />
+    <Compile Include="TableSourceViewController.designer.cs">
+      <DependentUpon>TableSourceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs" />
+    <Compile Include="detallesContacts.cs" />
+    <Compile Include="detallesContacts.designer.cs">
+      <DependentUpon>detallesContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detalleContacto.cs" />
+    <Compile Include="detalleContacto.designer.cs">
+      <DependentUpon>detalleContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableContactViewController.cs" />
+    <Compile Include="TableContactViewController.designer.cs">
+      <DependentUpon>TableContactViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
