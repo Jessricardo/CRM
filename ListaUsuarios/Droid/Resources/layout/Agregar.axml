@@ -8,11 +8,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/scroll"
-        android:id="@+id/textView2" />
+        android:id="@+id/txtTitulo" />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_above="@id/botones"
         android:id="@+id/scroll">
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,6 +98,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/botones"
         android:gravity="center"
         android:layout_alignParentBottom="true">
         <Button

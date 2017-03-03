@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:padding="15dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Small Text"
+        android:text="Nombre"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,9 +15,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/txtNombre" />
     <TextView
-        android:text="Small Text"
+        android:text="Clase"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,9 +27,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:id="@+id/txtClase" />
     <TextView
-        android:text="Small Text"
+        android:text="Telefono"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,5 +39,24 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView6" />
+        android:id="@+id/txtNumero" />
+    <Button
+        android:text="Editar"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnEditar"
+        android:background="#ff4db6ac"
+        android:textColor="#fffafafa"
+        style="@style/AlertDialog.AppCompat" />
+    <Button
+        android:text="Eliminar"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEliminar"
+        android:background="#ffef5350"
+        android:textColor="#fffafafa"
+        style="@style/Theme.AppCompat.NoActionBar" />
 </LinearLayout>

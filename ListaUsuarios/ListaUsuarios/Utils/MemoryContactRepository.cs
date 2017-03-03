@@ -12,14 +12,16 @@ namespace ListaUsuarios
 			contacts = new List<Contact>();
 			contacts.Add(new Contact()
 			{
-				contactName = "Jose Luis",
+				contactId = 1,
+				contactName = "Jesús Apodaca",
 				contactStreet = "Random St",
 				contactEmail = "some@email.com",
 				contactClass = "Contact",
 			});
 			contacts.Add(new Contact()
 			{
-				contactName = "Yeratzy Espinoza",
+				contactId = 2,
+				contactName = "Jesús Abraham",
 				contactStreet = "Other Random St",
 				contactEmail = "someother@email.com",
 				contactClass = "Contact",
