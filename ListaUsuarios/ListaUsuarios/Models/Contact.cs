@@ -1,9 +1,12 @@
 ﻿using System;
+using SQLite;
+
 namespace ListaUsuarios
 {
 	//Entity
 	public class Contact
 	{
+		[SQLite.PrimaryKey, SQLite.AutoIncrement]
 		public int contactId{	get;	set;}
 		public string contactName {	get;	set;}
 		public string contactEmail { get; set; }
