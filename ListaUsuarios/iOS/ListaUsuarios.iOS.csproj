@@ -166,7 +166,6 @@
     <Compile Include="TableSourceViewController.designer.cs">
       <DependentUpon>TableSourceViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contact.cs" />
     <Compile Include="detallesContacts.cs" />
     <Compile Include="detallesContacts.designer.cs">
       <DependentUpon>detallesContacts.cs</DependentUpon>

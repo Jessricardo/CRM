@@ -40,7 +40,7 @@ namespace ListaUsuarios.iOS
 			if (cell == null)
 			{ cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier); }
 
-			string nombreCompleto = item.nombre + " " + item.apellidoP;
+			string nombreCompleto = item.contactName;
 			cell.TextLabel.Text = nombreCompleto;
 			cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
 
@@ -53,14 +53,14 @@ namespace ListaUsuarios.iOS
 			//okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 			detalleContacto next = owner.Storyboard.InstantiateViewController("detalleContacto") as detalleContacto;
 			//Console.WriteLine(">>>"+TableItems[indexPath.Row].nombre);
-			next.nombre = TableItems[indexPath.Row].nombre;
-			next.apellidoP = TableItems[indexPath.Row].apellidoP;
-			next.apellidoM = TableItems[indexPath.Row].apellidoM;
-			next.correo = TableItems[indexPath.Row].correo;
-			next.direccion = TableItems[indexPath.Row].direccion;
-			next.edad = TableItems[indexPath.Row].edad;
-			next.telefono = TableItems[indexPath.Row].telefono;
-			next.puesto = TableItems[indexPath.Row].puesto;
+			next.id = TableItems[indexPath.Row].contactId;
+			//next.apellidoP = TableItems[indexPath.Row].apellidoP;
+			//next.apellidoM = TableItems[indexPath.Row].apellidoM;
+			//next.correo = TableItems[indexPath.Row].correo;
+			//next.direccion = TableItems[indexPath.Row].direccion;
+			//next.edad = TableItems[indexPath.Row].edad;
+			//next.telefono = TableItems[indexPath.Row].telefono;
+			//next.puesto = TableItems[indexPath.Row].puesto;
 			owner.NavigationController.PushViewController(next,true);
 			tableView.DeselectRow(indexPath, true);
 			//owner.PresentViewController(okAlertController, true, null);
@@ -69,7 +69,7 @@ namespace ListaUsuarios.iOS
 
 		public override void AccessoryButtonTapped(UITableView tableView, NSIndexPath indexPath)
 		{
-			UIAlertController okAlertController = UIAlertController.Create("Contacto seleccionado", TableItems[indexPath.Row].nombre, UIAlertControllerStyle.Alert);
+			UIAlertController okAlertController = UIAlertController.Create("Contacto seleccionado", TableItems[indexPath.Row].contactName, UIAlertControllerStyle.Alert);
 			okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 			owner.PresentViewController(okAlertController, true, null);
 
@@ -90,7 +90,7 @@ namespace ListaUsuarios.iOS
 					tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
 					break;
 				case UITableViewCellEditingStyle.None:
-					Console.WriteLine("Borrar: " + TableItems[indexPath.Row].nombre);
+					Console.WriteLine("Borrar: " + TableItems[indexPath.Row].contactName);
 					break;
 			}
 		}
@@ -100,7 +100,7 @@ namespace ListaUsuarios.iOS
 		}
 		public override string TitleForDeleteConfirmation(UITableView tableView, NSIndexPath indexPath)
 		{   // Optional - default text is 'Delete'
-			return "Borrar (" + TableItems[indexPath.Row].nombre + ")";
+			return "Borrar (" + TableItems[indexPath.Row].contactName + ")";
 		}
 
 	//	public override UITableViewCellEditingStyle EditingStyleForRow(UITableView

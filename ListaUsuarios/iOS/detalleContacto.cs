@@ -3,19 +3,17 @@ using System;
 using UIKit;
 using System.Collections.Generic;
 using System.Collections;
+using System.IO;
+using Xamarin.Forms;
+
 namespace ListaUsuarios.iOS
 {
     public partial class detalleContacto : UIViewController
     {
 		Contact contacto;
-		public string nombre { set; get;}
-		public string apellidoP { set; get; }
-		public string apellidoM { set; get; }
-		public string correo { set; get; }
-		public string telefono { set; get; }
-		public string puesto { set; get; }
-		public string direccion { set; get; }
-		public string edad { set; get; }
+
+		public int id { set; get;}
+
         public detalleContacto (IntPtr handle) : base (handle)
         {
         }
@@ -25,19 +23,33 @@ namespace ListaUsuarios.iOS
 
 			base.ViewDidLoad();
 			//lblNombreBlanco.Text = nombre;
-			txtNombre.Text = nombre;
-			txtApellidoM.Text = apellidoM;
-			txtApellidoP.Text = apellidoP;
-			txtCorreo.Text =correo;
-			txtPuesto.Text = puesto;
-			txtDireccion.Text = direccion;
-			txtEdad.Text = edad;
-			txtTelefono.Text = telefono;
+			var fileName = "dbCRM.db3";
+			var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+			var libraryPath = Path.Combine(documentsPath, "..", "Library");
+			var path = Path.Combine(libraryPath, fileName);
+
+			IContactRepository connection = new SQLiteContactRepository(path);
+			contacto=connection.readById(id);
+			txtNombre.Text = contacto.contactName;
+
+			txtCorreo.Text =contacto.contactEmail;
+			txtPuesto.Text = contacto.contactClass;
+			txtDireccion.Text = contacto.contactStreet+contacto.contactState;
+
+			txtTelefono.Text = contacto.contactCellphone;
 			//Accion al boton
 			btnEditar.TouchUpInside += delegate 
 			{
-				
-				
+				Contact c1 = new Contact();
+				c1.contactName = txtNombre.Text;
+				c1.contactCellphone = txtTelefono.Text;
+				c1.contactClass = txtPuesto.Text;
+				//c1.contactCountry = txt;
+				c1.contactEmail = txtCorreo.Text;
+				c1.contactStreet = txtDireccion.Text;
+				//c1.contactPicture = "";
+				//	c1.contactState = ="";
+				connection.Update(c1);
 			};
 
 		}
