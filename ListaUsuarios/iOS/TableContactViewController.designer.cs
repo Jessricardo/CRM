@@ -14,8 +14,16 @@ namespace ListaUsuarios.iOS
     [Register ("TableContactViewController")]
     partial class TableContactViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnAdd { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (btnAdd != null) {
+                btnAdd.Dispose ();
+                btnAdd = null;
+            }
         }
     }
 }

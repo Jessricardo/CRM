@@ -40,17 +40,18 @@ namespace ListaUsuarios.iOS
 			//Accion al boton
 			btnEditar.TouchUpInside += delegate 
 			{
-				Contact c1 = new Contact();
-				c1.contactName = txtNombre.Text;
-				c1.contactCellphone = txtTelefono.Text;
-				c1.contactClass = txtPuesto.Text;
+				//Contact c1 = new Contact();
+				//c1.contactName = txtNombre.Text;
+				//c1.contactCellphone = txtTelefono.Text;
+				//c1.contactClass = txtPuesto.Text;
 				//c1.contactCountry = txt;
-				c1.contactEmail = txtCorreo.Text;
-				c1.contactStreet = txtDireccion.Text;
+				//c1.contactEmail = txtCorreo.Text;
+				//c1.contactStreet = txtDireccion.Text;
 				//c1.contactPicture = "";
 				//	c1.contactState = ="";
-				connection.Update(c1);
+				//connection.Update(c1);
 			};
+
 
 		}
     }

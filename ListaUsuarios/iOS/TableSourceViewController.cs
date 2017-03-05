@@ -3,6 +3,7 @@ using Foundation;
 using UIKit;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ListaUsuarios.iOS
 {
@@ -16,6 +17,7 @@ namespace ListaUsuarios.iOS
 
 		string CellIdentifier = "TableCell";
 		UIViewController owner;
+		TableSourceViewController owner1;
 		public TableSourceViewController(List<Contact> items, UIViewController owner)
 		{
 			TableItems = items;
@@ -23,7 +25,19 @@ namespace ListaUsuarios.iOS
 
 
 		}
+		public TableSourceViewController(List<Contact> items, TableSourceViewController owner1)
+		{
+			TableItems = items;
+			this.owner1 = owner1;
 
+
+		}
+		public void actualizar()
+		{
+			var table = new UITableView();
+			table.Source = new TableSourceViewController(TableItems, this);
+			table.ReloadData();
+		}
 		public override nint RowsInSection(UITableView tableview, nint section)
 		{
 			return TableItems.Count;
@@ -88,7 +102,15 @@ namespace ListaUsuarios.iOS
 					TableItems.RemoveAt(indexPath.Row);
 					// delete the row from the table
 					tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
-					break;
+					var fileName = "dbCRM.db3";
+					var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+					var libraryPath = Path.Combine(documentsPath, "..", "Library");
+					var path = Path.Combine(libraryPath, fileName);
+					IContactRepository a = new SQLiteContactRepository(path);
+					Contact c = TableItems[indexPath.Row];
+					a.Delete(c);
+
+				break;
 				case UITableViewCellEditingStyle.None:
 					Console.WriteLine("Borrar: " + TableItems[indexPath.Row].contactName);
 					break;

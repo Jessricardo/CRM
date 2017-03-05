@@ -24,6 +24,7 @@ namespace ListaUsuarios
 		public void Delete(Contact c)
 		{
 			db.Delete<Contact>(c.contactId);
+
 		}
 
 		public List<Contact> Read()
@@ -39,7 +40,7 @@ namespace ListaUsuarios
 
 		public void Update(Contact c) 
 		{
-			throw new NotImplementedException();
+			//FALTA IMPLEMENTAR
 		}
 	}
 }

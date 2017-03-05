@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -91,7 +91,7 @@
             <objects>
                 <tabBarController id="99" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="102">
-                        <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                        <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -101,7 +101,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="103" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="-100"/>
+            <point key="canvasLocation" x="22" y="-104"/>
         </scene>
         <!--Detalle Contacto-->
         <scene sceneID="229">
@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="232" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2381.5999999999999" y="-100.29989999999999"/>
+            <point key="canvasLocation" x="856.6001" y="659.7001"/>
         </scene>
         <!--Contactos-->
         <scene sceneID="384">
@@ -267,12 +267,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="404"/>
-                    <navigationItem key="navigationItem" title="Contactos" id="558"/>
+                    <navigationItem key="navigationItem" title="Contactos" id="558">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="638">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="637" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
+                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnAdd" destination="637" id="name-outlet-637"/>
+                        <segue id="767" destination="617" kind="show"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="387" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="-100"/>
+            <point key="canvasLocation" x="856" y="-98"/>
         </scene>
         <!--Item-->
         <scene sceneID="418">
@@ -281,7 +295,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="494"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="421">
-                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -290,7 +304,138 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="422" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="-100"/>
+            <point key="canvasLocation" x="433" y="-103"/>
+        </scene>
+        <scene sceneID="616">
+            <objects>
+                <viewController id="617" sceneMemberID="viewController" customClass="addViewController" storyboardIdentifier="addViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="614"/>
+                        <viewControllerLayoutGuide type="bottom" id="615"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="618">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="621" fixedFrame="YES">
+                                <rect key="frame" x="32" y="377" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="622" fixedFrame="YES">
+                                <rect key="frame" x="27" y="330" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="623" fixedFrame="YES">
+                                <rect key="frame" x="27" y="282" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="624" fixedFrame="YES">
+                                <rect key="frame" x="27" y="241" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="625" fixedFrame="YES">
+                                <rect key="frame" x="27" y="200" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="626" fixedFrame="YES">
+                                <rect key="frame" x="27" y="153" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="627" misplaced="YES" placeholder="Ingrese Telefono">
+                                <rect key="frame" x="27" y="115" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="628"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="629" misplaced="YES" placeholder="Ingrese Nombre">
+                                <rect key="frame" x="27" y="77" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="630"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar Contacto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="631" fixedFrame="YES">
+                                <rect key="frame" x="27" y="48" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="632" fixedFrame="YES">
+                                <rect key="frame" x="27" y="429" width="343" height="30"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnEditar_TouchUpInside:" destination="634" eventType="touchUpInside" id="633"/>
+                                </connections>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="621"/>
+                                <exclude reference="622"/>
+                                <exclude reference="623"/>
+                                <exclude reference="624"/>
+                                <exclude reference="625"/>
+                                <exclude reference="626"/>
+                                <exclude reference="627"/>
+                                <exclude reference="629"/>
+                                <exclude reference="631"/>
+                                <exclude reference="632"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="621"/>
+                                <include reference="622"/>
+                                <include reference="623"/>
+                                <include reference="624"/>
+                                <include reference="625"/>
+                                <include reference="626"/>
+                                <include reference="627"/>
+                                <include reference="629"/>
+                                <include reference="631"/>
+                                <include reference="632"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnAddDetalle" destination="632" id="name-outlet-632"/>
+                        <outlet property="txtNombre" destination="629" id="name-outlet-629"/>
+                        <outlet property="txtTelefono" destination="627" id="name-outlet-627"/>
+                        <outlet property="txtPuesto" destination="626" id="name-outlet-626"/>
+                        <outlet property="txtCorreo" destination="625" id="name-outlet-625"/>
+                        <outlet property="txtDireccion" destination="624" id="name-outlet-624"/>
+                        <outlet property="txtPais" destination="623" id="name-outlet-623"/>
+                        <outlet property="txtEstado" destination="622" id="name-outlet-622"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="619" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="-100"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
 </document>
