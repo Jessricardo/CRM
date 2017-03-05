@@ -33,7 +33,7 @@ namespace ListaUsuarios.iOS
 			txtNombre.Text = contacto.contactName;
 
 			txtCorreo.Text =contacto.contactEmail;
-			txtPuesto.Text = contacto.contactClass;
+			txtPuesto.Text = contacto.contactId.ToString();
 			txtDireccion.Text = contacto.contactStreet+contacto.contactState;
 
 			txtTelefono.Text = contacto.contactCellphone;

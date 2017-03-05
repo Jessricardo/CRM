@@ -68,13 +68,6 @@ namespace ListaUsuarios.iOS
 			detalleContacto next = owner.Storyboard.InstantiateViewController("detalleContacto") as detalleContacto;
 			//Console.WriteLine(">>>"+TableItems[indexPath.Row].nombre);
 			next.id = TableItems[indexPath.Row].contactId;
-			//next.apellidoP = TableItems[indexPath.Row].apellidoP;
-			//next.apellidoM = TableItems[indexPath.Row].apellidoM;
-			//next.correo = TableItems[indexPath.Row].correo;
-			//next.direccion = TableItems[indexPath.Row].direccion;
-			//next.edad = TableItems[indexPath.Row].edad;
-			//next.telefono = TableItems[indexPath.Row].telefono;
-			//next.puesto = TableItems[indexPath.Row].puesto;
 			owner.NavigationController.PushViewController(next,true);
 			tableView.DeselectRow(indexPath, true);
 			//owner.PresentViewController(okAlertController, true, null);
@@ -99,16 +92,17 @@ namespace ListaUsuarios.iOS
 			{
 				case UITableViewCellEditingStyle.Delete:
 					// remove the item from the underlying data source
-					TableItems.RemoveAt(indexPath.Row);
-					// delete the row from the table
-					tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
 					var fileName = "dbCRM.db3";
 					var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 					var libraryPath = Path.Combine(documentsPath, "..", "Library");
 					var path = Path.Combine(libraryPath, fileName);
 					IContactRepository a = new SQLiteContactRepository(path);
+
 					Contact c = TableItems[indexPath.Row];
 					a.Delete(c);
+					// delete the row from the table
+					TableItems.RemoveAt(indexPath.Row);
+					tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
 
 				break;
 				case UITableViewCellEditingStyle.None:

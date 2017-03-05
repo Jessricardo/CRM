@@ -24,7 +24,6 @@ namespace ListaUsuarios
 		public void Delete(Contact c)
 		{
 			db.Delete<Contact>(c.contactId);
-
 		}
 
 		public List<Contact> Read()
