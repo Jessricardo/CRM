@@ -37,7 +37,7 @@ namespace ListaUsuarios.iOS
 				Contact c1 = new Contact();
 				c1.contactName = txtNombre.Text;
 				c1.contactCellphone = txtTelefono.Text;
-				c1.contactClass = txtPuesto.Text;
+				c1.contactClass = "3";
 				c1.contactEmail = txtCorreo.Text;
 				c1.contactStreet = txtDireccion.Text;
 				c1.contactState = txtEstado.Text;

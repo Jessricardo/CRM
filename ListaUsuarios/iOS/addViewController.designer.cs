@@ -40,10 +40,6 @@ namespace ListaUsuarios.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtPuesto { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtTelefono { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -76,11 +72,6 @@ namespace ListaUsuarios.iOS
             if (txtPais != null) {
                 txtPais.Dispose ();
                 txtPais = null;
-            }
-
-            if (txtPuesto != null) {
-                txtPuesto.Dispose ();
-                txtPuesto = null;
             }
 
             if (txtTelefono != null) {

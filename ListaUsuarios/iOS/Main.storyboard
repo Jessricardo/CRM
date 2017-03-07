@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-Ac-vcx">
-                                <rect key="frame" x="112" y="224" width="0.0" height="164"/>
+                                <rect key="frame" x="112" y="224" width="0.0" height="231"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <state key="normal" title="¡Bienvenido!">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,7 +93,7 @@
             <objects>
                 <tabBarController id="99" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="102">
-                        <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                        <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -289,7 +290,7 @@
                     <navigationItem key="navigationItem" title="Contactos" id="558">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="638">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="637">
-                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -314,7 +315,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="494"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="421">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -338,42 +339,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Edad" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="621">
-                                <rect key="frame" x="16" y="419" width="343" height="30"/>
+                                <rect key="frame" x="16" y="366" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Estado" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="622">
-                                <rect key="frame" x="16" y="381" width="343" height="30"/>
+                                <rect key="frame" x="16" y="328" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese País" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="623">
-                                <rect key="frame" x="16" y="343" width="343" height="30"/>
+                                <rect key="frame" x="16" y="290" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Dirección" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="624">
-                                <rect key="frame" x="16" y="305" width="343" height="30"/>
+                                <rect key="frame" x="16" y="252" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Correo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="625">
-                                <rect key="frame" x="16" y="267" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Puesto" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="626">
-                                <rect key="frame" x="16" y="229" width="343" height="30"/>
+                                <rect key="frame" x="16" y="214" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Teléfono" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="627">
-                                <rect key="frame" x="16" y="191" width="343" height="30"/>
+                                <rect key="frame" x="16" y="176" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Nombre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="629">
-                                <rect key="frame" x="16" y="153" width="343" height="30"/>
+                                <rect key="frame" x="16" y="138" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -384,7 +380,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="632">
-                                <rect key="frame" x="16" y="466" width="343" height="30"/>
+                                <rect key="frame" x="16" y="413" width="343" height="30"/>
                                 <state key="normal" title="Guardar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -392,36 +388,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="624" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="382-Wa-dMr"/>
-                            <constraint firstItem="626" firstAttribute="top" secondItem="627" secondAttribute="bottom" constant="8" id="3Hz-EY-XFi"/>
-                            <constraint firstItem="627" firstAttribute="top" secondItem="629" secondAttribute="bottom" constant="8" id="5rH-38-Vom"/>
-                            <constraint firstItem="624" firstAttribute="top" secondItem="625" secondAttribute="bottom" constant="8" id="5t1-C7-MWs"/>
-                            <constraint firstItem="625" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="63E-uf-U8p"/>
-                            <constraint firstItem="626" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="7Sb-Qt-cxn"/>
-                            <constraint firstItem="623" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="8cN-DI-8lL"/>
-                            <constraint firstAttribute="trailing" secondItem="631" secondAttribute="trailing" constant="16" id="9Ct-Hn-8Jb"/>
-                            <constraint firstItem="631" firstAttribute="leading" secondItem="618" secondAttribute="leading" constant="16" id="ACh-y7-F8Z"/>
-                            <constraint firstItem="632" firstAttribute="top" secondItem="621" secondAttribute="bottom" constant="17" id="EIe-mR-laS"/>
-                            <constraint firstItem="629" firstAttribute="top" secondItem="631" secondAttribute="bottom" constant="39" id="ERb-df-ivF"/>
-                            <constraint firstItem="621" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="IQz-RF-LBJ"/>
-                            <constraint firstItem="624" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="PVZ-oH-x34"/>
-                            <constraint firstItem="632" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="UY7-HF-1kA"/>
-                            <constraint firstItem="625" firstAttribute="top" secondItem="626" secondAttribute="bottom" constant="8" id="Uov-uq-WPX"/>
-                            <constraint firstItem="625" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="WBI-z0-R7X"/>
-                            <constraint firstItem="632" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="WPu-Yo-kqx"/>
-                            <constraint firstItem="629" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="WVl-dX-9tU"/>
-                            <constraint firstItem="629" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="YLZ-jb-F7i"/>
-                            <constraint firstItem="622" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="Yhk-Kb-iXb"/>
-                            <constraint firstItem="621" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="aDW-Di-ZTo"/>
-                            <constraint firstItem="621" firstAttribute="top" secondItem="622" secondAttribute="bottom" constant="8" id="emC-0p-9sN"/>
-                            <constraint firstItem="622" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="mUR-sQ-ACu"/>
-                            <constraint firstItem="626" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="mXA-Oj-6iQ"/>
-                            <constraint firstItem="627" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="oJG-kY-GUf"/>
-                            <constraint firstItem="631" firstAttribute="top" secondItem="614" secondAttribute="bottom" constant="29" id="rMe-T4-33L"/>
-                            <constraint firstItem="627" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="sMr-Tl-i1h"/>
-                            <constraint firstItem="622" firstAttribute="top" secondItem="623" secondAttribute="bottom" constant="8" id="sYO-Wa-wL1"/>
-                            <constraint firstItem="623" firstAttribute="top" secondItem="624" secondAttribute="bottom" constant="8" id="uCQ-ty-zTy"/>
-                            <constraint firstItem="623" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="uuL-Rm-giE"/>
+                            <constraint firstItem="632" firstAttribute="top" secondItem="621" secondAttribute="bottom" constant="17" id="1Xv-Ox-u9C"/>
+                            <constraint firstItem="629" firstAttribute="top" secondItem="631" secondAttribute="bottom" constant="24" id="1dn-to-6X6"/>
+                            <constraint firstItem="622" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="1v8-0x-OOB"/>
+                            <constraint firstItem="621" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="2YL-PB-0h3"/>
+                            <constraint firstItem="631" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="7mh-yb-PBn"/>
+                            <constraint firstItem="621" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="Azv-rx-hAM"/>
+                            <constraint firstItem="622" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="B1x-yw-yHJ"/>
+                            <constraint firstItem="627" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="Bll-TH-r0q"/>
+                            <constraint firstItem="631" firstAttribute="top" secondItem="614" secondAttribute="bottom" constant="29" id="F7o-W1-1ha"/>
+                            <constraint firstItem="624" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="GQe-nm-Z1i"/>
+                            <constraint firstItem="622" firstAttribute="top" secondItem="623" secondAttribute="bottom" constant="8" id="H6W-KA-n7L"/>
+                            <constraint firstItem="623" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="HoN-my-sAV"/>
+                            <constraint firstItem="631" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="J4p-T9-zCT"/>
+                            <constraint firstItem="629" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="MwY-mC-hhi"/>
+                            <constraint firstItem="621" firstAttribute="top" secondItem="622" secondAttribute="bottom" constant="8" id="QK6-CP-ZZi"/>
+                            <constraint firstItem="627" firstAttribute="top" secondItem="629" secondAttribute="bottom" constant="8" id="Vgy-ge-FuY"/>
+                            <constraint firstItem="629" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="a3S-5O-KKi"/>
+                            <constraint firstItem="632" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="aT1-Wq-eeX"/>
+                            <constraint firstItem="632" firstAttribute="top" secondItem="621" secondAttribute="bottom" constant="17" id="abj-Iz-u2r"/>
+                            <constraint firstItem="624" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="cxh-ZG-WGg"/>
+                            <constraint firstItem="625" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="f80-GR-gny"/>
+                            <constraint firstItem="629" firstAttribute="top" secondItem="631" secondAttribute="bottom" constant="24" id="f9o-eL-Iff"/>
+                            <constraint firstItem="624" firstAttribute="top" secondItem="625" secondAttribute="bottom" constant="8" id="htv-en-s6r"/>
+                            <constraint firstItem="623" firstAttribute="top" secondItem="624" secondAttribute="bottom" constant="8" id="i4U-Pr-V3A"/>
+                            <constraint firstItem="625" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="jtT-Mh-eZ8"/>
+                            <constraint firstItem="625" firstAttribute="top" secondItem="627" secondAttribute="bottom" constant="8" id="jze-Oh-Gj4"/>
+                            <constraint firstItem="632" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="nDw-0E-OH3"/>
+                            <constraint firstItem="623" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="p1B-br-OgF"/>
+                            <constraint firstItem="627" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="u23-1Y-urA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -430,7 +425,6 @@
                                 <exclude reference="623"/>
                                 <exclude reference="624"/>
                                 <exclude reference="625"/>
-                                <exclude reference="626"/>
                                 <exclude reference="627"/>
                                 <exclude reference="629"/>
                                 <exclude reference="631"/>
@@ -444,7 +438,6 @@
                                 <include reference="623"/>
                                 <include reference="624"/>
                                 <include reference="625"/>
-                                <include reference="626"/>
                                 <include reference="627"/>
                                 <include reference="629"/>
                                 <include reference="631"/>
@@ -459,7 +452,6 @@
                         <outlet property="txtEstado" destination="622" id="name-outlet-622"/>
                         <outlet property="txtNombre" destination="629" id="name-outlet-629"/>
                         <outlet property="txtPais" destination="623" id="name-outlet-623"/>
-                        <outlet property="txtPuesto" destination="626" id="name-outlet-626"/>
                         <outlet property="txtTelefono" destination="627" id="name-outlet-627"/>
                     </connections>
                 </viewController>
