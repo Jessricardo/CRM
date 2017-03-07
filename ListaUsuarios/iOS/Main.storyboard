@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-Ac-vcx">
-                                <rect key="frame" x="112" y="224" width="0.0" height="97"/>
+                                <rect key="frame" x="112" y="224" width="0.0" height="164"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <state key="normal" title="¡Bienvenido!">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-387" y="-100"/>
+            <point key="canvasLocation" x="-1039" y="-107"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="98">
@@ -101,7 +102,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="103" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="-104"/>
+            <point key="canvasLocation" x="-286" y="-107"/>
         </scene>
         <!--Detalle Contacto-->
         <scene sceneID="229">
@@ -142,15 +143,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="580">
-                                <rect key="frame" x="16" y="407" width="343" height="30"/>
-                                <state key="normal" title="Editar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="BtnEditar_TouchUpInside:" destination="230" eventType="touchUpInside" id="603"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="583">
                                 <rect key="frame" x="16" y="180" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -176,17 +168,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="776">
+                                <rect key="frame" x="20" y="413" width="339" height="39"/>
+                                <state key="normal" title="Editar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="783">
+                                <rect key="frame" x="20" y="460" width="339" height="39"/>
+                                <state key="normal" title="Promover">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="784">
+                                <rect key="frame" x="20" y="507" width="339" height="39"/>
+                                <state key="normal" title="Descartar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="783" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="08m-On-VvR"/>
                             <constraint firstItem="568" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="0U3-Qh-O0V"/>
                             <constraint firstItem="583" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="3fz-vk-qSj"/>
+                            <constraint firstItem="784" firstAttribute="top" secondItem="783" secondAttribute="bottom" constant="8" id="3kj-LM-qMd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="568" secondAttribute="trailing" id="4Iu-ed-iIf"/>
                             <constraint firstItem="567" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="4Zw-fj-ogA"/>
                             <constraint firstItem="567" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="8CL-tq-whA"/>
                             <constraint firstItem="567" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="8QS-pE-m2t"/>
+                            <constraint firstItem="783" firstAttribute="top" secondItem="776" secondAttribute="bottom" constant="8" id="8ZQ-h6-jUT"/>
                             <constraint firstItem="570" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="8tz-h6-uVg"/>
                             <constraint firstItem="568" firstAttribute="top" secondItem="567" secondAttribute="bottom" constant="8" id="A8q-Cn-TAE"/>
+                            <constraint firstItem="776" firstAttribute="top" secondItem="587" secondAttribute="bottom" constant="28" id="Ai9-Rn-Fim"/>
                             <constraint firstItem="568" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="C0S-j2-TgV"/>
                             <constraint firstItem="567" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="CF4-Vu-7c2"/>
                             <constraint firstItem="587" firstAttribute="top" secondItem="586" secondAttribute="bottom" constant="8" id="Ck6-nh-nsP"/>
@@ -194,18 +208,18 @@
                             <constraint firstItem="568" firstAttribute="top" secondItem="567" secondAttribute="bottom" constant="8" id="Gk5-DF-ZZK"/>
                             <constraint firstItem="587" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="I2Z-PU-rPc"/>
                             <constraint firstItem="584" firstAttribute="top" secondItem="583" secondAttribute="bottom" constant="8" id="IQU-Q6-Qac"/>
-                            <constraint firstItem="580" firstAttribute="top" secondItem="587" secondAttribute="bottom" constant="8" id="KKG-rE-nGs"/>
+                            <constraint firstItem="784" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" constant="4" id="LUz-6e-tt3"/>
                             <constraint firstItem="279" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="MXu-Ee-0uD"/>
                             <constraint firstItem="567" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="MbX-QQ-Z3S"/>
                             <constraint firstItem="570" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="MxY-33-sSS"/>
                             <constraint firstItem="585" firstAttribute="top" secondItem="584" secondAttribute="bottom" constant="8" id="OJj-S2-Aax"/>
-                            <constraint firstItem="580" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="PIa-Gi-vdt"/>
                             <constraint firstItem="568" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="Ps1-L4-w75"/>
                             <constraint firstItem="586" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="QDv-k9-ZkH"/>
                             <constraint firstItem="279" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="QH4-i9-zdK"/>
                             <constraint firstItem="583" firstAttribute="top" secondItem="570" secondAttribute="bottom" constant="8" id="RaU-ho-YPP"/>
                             <constraint firstItem="584" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="Rg3-kq-YXS"/>
                             <constraint firstItem="568" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="SzD-XK-XGl"/>
+                            <constraint firstItem="776" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="UPb-r5-thb"/>
                             <constraint firstItem="279" firstAttribute="top" secondItem="227" secondAttribute="bottom" constant="8" id="USq-Ji-5Ud"/>
                             <constraint firstItem="585" firstAttribute="top" secondItem="584" secondAttribute="bottom" constant="8" id="UTj-DG-mj6"/>
                             <constraint firstItem="567" firstAttribute="top" secondItem="279" secondAttribute="bottom" constant="8" id="VXj-40-mDX"/>
@@ -219,17 +233,20 @@
                             <constraint firstItem="567" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="eFo-aE-1T6"/>
                             <constraint firstItem="586" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="f0O-PL-LYX"/>
                             <constraint firstItem="587" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="g6m-Mn-qgX"/>
-                            <constraint firstItem="580" firstAttribute="top" secondItem="587" secondAttribute="bottom" constant="8" id="gLV-jg-0Sn"/>
                             <constraint firstItem="567" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="gOi-5z-O48"/>
                             <constraint firstItem="567" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="hvP-61-LcK"/>
-                            <constraint firstItem="580" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="i3e-DG-XTf"/>
                             <constraint firstItem="568" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="i5M-ut-8AQ"/>
                             <constraint firstItem="570" firstAttribute="top" secondItem="568" secondAttribute="bottom" constant="8" id="iMn-aX-gBB"/>
+                            <constraint firstItem="776" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" constant="4" id="ibg-rF-nCo"/>
                             <constraint firstItem="584" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" id="q8r-m3-l9g"/>
                             <constraint firstItem="587" firstAttribute="top" secondItem="586" secondAttribute="bottom" constant="8" id="qLJ-oh-9Rw"/>
                             <constraint firstItem="568" firstAttribute="top" secondItem="567" secondAttribute="bottom" constant="8" id="qgW-4v-ONx"/>
+                            <constraint firstItem="784" firstAttribute="top" secondItem="783" secondAttribute="bottom" constant="8" id="qhR-uk-FHV"/>
                             <constraint firstItem="568" firstAttribute="top" secondItem="567" secondAttribute="bottom" constant="8" id="rPu-u9-Qrj"/>
+                            <constraint firstItem="783" firstAttribute="top" secondItem="776" secondAttribute="bottom" constant="8" id="tXo-nA-9H0"/>
                             <constraint firstItem="567" firstAttribute="top" secondItem="279" secondAttribute="bottom" constant="8" id="vVQ-7A-Gz9"/>
+                            <constraint firstItem="783" firstAttribute="leading" secondItem="231" secondAttribute="leadingMargin" constant="4" id="vbc-QL-r7z"/>
+                            <constraint firstItem="784" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="wcP-ty-zIn"/>
                             <constraint firstItem="584" firstAttribute="top" secondItem="583" secondAttribute="bottom" constant="8" id="ypD-fp-Gbk"/>
                             <constraint firstItem="585" firstAttribute="trailing" secondItem="231" secondAttribute="trailingMargin" id="yz3-2z-RHo"/>
                             <constraint firstItem="568" firstAttribute="top" secondItem="567" secondAttribute="bottom" constant="8" id="zU3-1g-zt5"/>
@@ -237,21 +254,23 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnEditar" destination="580" id="name-outlet-580"/>
+                        <outlet property="btnEdi" destination="776" id="name-outlet-776"/>
+                        <outlet property="btnPromover" destination="783" id="name-outlet-783"/>
+                        <outlet property="btndescartar" destination="784" id="name-outlet-784"/>
                         <outlet property="lblNombre" destination="279" id="name-outlet-279"/>
-                        <outlet property="txtApellidoM" destination="570" id="name-outlet-570"/>
-                        <outlet property="txtApellidoP" destination="568" id="name-outlet-568"/>
-                        <outlet property="txtCorreo" destination="587" id="name-outlet-587"/>
-                        <outlet property="txtDireccion" destination="583" id="name-outlet-583"/>
-                        <outlet property="txtEdad" destination="584" id="name-outlet-584"/>
+                        <outlet property="txtCorreo" destination="583" id="name-outlet-583"/>
+                        <outlet property="txtDireccion" destination="584" id="name-outlet-584"/>
+                        <outlet property="txtEdad" destination="587" id="name-outlet-587"/>
+                        <outlet property="txtEstado" destination="586" id="name-outlet-586"/>
                         <outlet property="txtNombre" destination="567" id="name-outlet-567"/>
-                        <outlet property="txtPuesto" destination="586" id="name-outlet-586"/>
-                        <outlet property="txtTelefono" destination="585" id="name-outlet-585"/>
+                        <outlet property="txtPais" destination="585" id="name-outlet-585"/>
+                        <outlet property="txtPuesto" destination="570" id="name-outlet-570"/>
+                        <outlet property="txtTelefono" destination="568" id="name-outlet-568"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="232" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856.6001" y="659.7001"/>
+            <point key="canvasLocation" x="1598.5999999999999" y="488.70010000000002"/>
         </scene>
         <!--Contactos-->
         <scene sceneID="384">
@@ -269,7 +288,7 @@
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="404"/>
                     <navigationItem key="navigationItem" title="Contactos" id="558">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="638">
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="637" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="637">
                                 <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
@@ -281,12 +300,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnAdd" destination="637" id="name-outlet-637"/>
-                        <segue id="767" destination="617" kind="show"/>
+                        <segue destination="617" kind="show" id="767"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="387" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="-98"/>
+            <point key="canvasLocation" x="1212" y="-106"/>
         </scene>
         <!--Item-->
         <scene sceneID="418">
@@ -304,11 +323,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="422" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="-103"/>
+            <point key="canvasLocation" x="462" y="-106"/>
         </scene>
+        <!--Add View Controller-->
         <scene sceneID="616">
             <objects>
-                <viewController id="617" sceneMemberID="viewController" customClass="addViewController" storyboardIdentifier="addViewController">
+                <viewController storyboardIdentifier="addViewController" id="617" customClass="addViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="614"/>
                         <viewControllerLayoutGuide type="bottom" id="615"/>
@@ -316,80 +336,93 @@
                     <view key="view" contentMode="scaleToFill" id="618">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="621" fixedFrame="YES">
-                                <rect key="frame" x="32" y="377" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Edad" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="621">
+                                <rect key="frame" x="16" y="419" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="622" fixedFrame="YES">
-                                <rect key="frame" x="27" y="330" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Estado" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="622">
+                                <rect key="frame" x="16" y="381" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="623" fixedFrame="YES">
-                                <rect key="frame" x="27" y="282" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese País" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="623">
+                                <rect key="frame" x="16" y="343" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="624" fixedFrame="YES">
-                                <rect key="frame" x="27" y="241" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Dirección" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="624">
+                                <rect key="frame" x="16" y="305" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="625" fixedFrame="YES">
-                                <rect key="frame" x="27" y="200" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Correo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="625">
+                                <rect key="frame" x="16" y="267" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="626" fixedFrame="YES">
-                                <rect key="frame" x="27" y="153" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Puesto" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="626">
+                                <rect key="frame" x="16" y="229" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="627" misplaced="YES" placeholder="Ingrese Telefono">
-                                <rect key="frame" x="27" y="115" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="628"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Teléfono" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="627">
+                                <rect key="frame" x="16" y="191" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="629" misplaced="YES" placeholder="Ingrese Nombre">
-                                <rect key="frame" x="27" y="77" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="630"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Nombre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="629">
+                                <rect key="frame" x="16" y="153" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar Contacto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="631" fixedFrame="YES">
-                                <rect key="frame" x="27" y="48" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar Contacto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="631">
+                                <rect key="frame" x="16" y="93" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="632" fixedFrame="YES">
-                                <rect key="frame" x="27" y="429" width="343" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="632">
+                                <rect key="frame" x="16" y="466" width="343" height="30"/>
                                 <state key="normal" title="Guardar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="BtnEditar_TouchUpInside:" destination="634" eventType="touchUpInside" id="633"/>
-                                </connections>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="624" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="382-Wa-dMr"/>
+                            <constraint firstItem="626" firstAttribute="top" secondItem="627" secondAttribute="bottom" constant="8" id="3Hz-EY-XFi"/>
+                            <constraint firstItem="627" firstAttribute="top" secondItem="629" secondAttribute="bottom" constant="8" id="5rH-38-Vom"/>
+                            <constraint firstItem="624" firstAttribute="top" secondItem="625" secondAttribute="bottom" constant="8" id="5t1-C7-MWs"/>
+                            <constraint firstItem="625" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="63E-uf-U8p"/>
+                            <constraint firstItem="626" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="7Sb-Qt-cxn"/>
+                            <constraint firstItem="623" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="8cN-DI-8lL"/>
+                            <constraint firstAttribute="trailing" secondItem="631" secondAttribute="trailing" constant="16" id="9Ct-Hn-8Jb"/>
+                            <constraint firstItem="631" firstAttribute="leading" secondItem="618" secondAttribute="leading" constant="16" id="ACh-y7-F8Z"/>
+                            <constraint firstItem="632" firstAttribute="top" secondItem="621" secondAttribute="bottom" constant="17" id="EIe-mR-laS"/>
+                            <constraint firstItem="629" firstAttribute="top" secondItem="631" secondAttribute="bottom" constant="39" id="ERb-df-ivF"/>
+                            <constraint firstItem="621" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="IQz-RF-LBJ"/>
+                            <constraint firstItem="624" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="PVZ-oH-x34"/>
+                            <constraint firstItem="632" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="UY7-HF-1kA"/>
+                            <constraint firstItem="625" firstAttribute="top" secondItem="626" secondAttribute="bottom" constant="8" id="Uov-uq-WPX"/>
+                            <constraint firstItem="625" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="WBI-z0-R7X"/>
+                            <constraint firstItem="632" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="WPu-Yo-kqx"/>
+                            <constraint firstItem="629" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="WVl-dX-9tU"/>
+                            <constraint firstItem="629" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="YLZ-jb-F7i"/>
+                            <constraint firstItem="622" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="Yhk-Kb-iXb"/>
+                            <constraint firstItem="621" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="aDW-Di-ZTo"/>
+                            <constraint firstItem="621" firstAttribute="top" secondItem="622" secondAttribute="bottom" constant="8" id="emC-0p-9sN"/>
+                            <constraint firstItem="622" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="mUR-sQ-ACu"/>
+                            <constraint firstItem="626" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="mXA-Oj-6iQ"/>
+                            <constraint firstItem="627" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="oJG-kY-GUf"/>
+                            <constraint firstItem="631" firstAttribute="top" secondItem="614" secondAttribute="bottom" constant="29" id="rMe-T4-33L"/>
+                            <constraint firstItem="627" firstAttribute="trailing" secondItem="618" secondAttribute="trailingMargin" id="sMr-Tl-i1h"/>
+                            <constraint firstItem="622" firstAttribute="top" secondItem="623" secondAttribute="bottom" constant="8" id="sYO-Wa-wL1"/>
+                            <constraint firstItem="623" firstAttribute="top" secondItem="624" secondAttribute="bottom" constant="8" id="uCQ-ty-zTy"/>
+                            <constraint firstItem="623" firstAttribute="leading" secondItem="618" secondAttribute="leadingMargin" id="uuL-Rm-giE"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="621"/>
@@ -421,21 +454,18 @@
                     </view>
                     <connections>
                         <outlet property="btnAddDetalle" destination="632" id="name-outlet-632"/>
-                        <outlet property="txtNombre" destination="629" id="name-outlet-629"/>
-                        <outlet property="txtTelefono" destination="627" id="name-outlet-627"/>
-                        <outlet property="txtPuesto" destination="626" id="name-outlet-626"/>
                         <outlet property="txtCorreo" destination="625" id="name-outlet-625"/>
                         <outlet property="txtDireccion" destination="624" id="name-outlet-624"/>
-                        <outlet property="txtPais" destination="623" id="name-outlet-623"/>
                         <outlet property="txtEstado" destination="622" id="name-outlet-622"/>
+                        <outlet property="txtNombre" destination="629" id="name-outlet-629"/>
+                        <outlet property="txtPais" destination="623" id="name-outlet-623"/>
+                        <outlet property="txtPuesto" destination="626" id="name-outlet-626"/>
+                        <outlet property="txtTelefono" destination="627" id="name-outlet-627"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="619" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="-100"/>
+            <point key="canvasLocation" x="1984.8" y="-106.5967"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination" type="retina47"/>
-    </simulatedMetricsContainer>
 </document>

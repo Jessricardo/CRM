@@ -39,7 +39,7 @@ namespace ListaUsuarios
 
 		public void Update(Contact c) 
 		{
-			//FALTA IMPLEMENTAR
+			db.Update(c);
 		}
 	}
 }

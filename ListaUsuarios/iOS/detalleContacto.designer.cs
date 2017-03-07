@@ -16,19 +16,19 @@ namespace ListaUsuarios.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnEditar { get; set; }
+        UIKit.UIButton btndescartar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnEdi { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnPromover { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblNombre { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtApellidoM { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtApellidoP { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -44,7 +44,15 @@ namespace ListaUsuarios.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtEstado { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtNombre { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtPais { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -54,30 +62,26 @@ namespace ListaUsuarios.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtTelefono { get; set; }
 
-        [Action ("BtnEditar_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void BtnEditar_TouchUpInside (UIKit.UIButton sender);
-
         void ReleaseDesignerOutlets ()
         {
-            if (btnEditar != null) {
-                btnEditar.Dispose ();
-                btnEditar = null;
+            if (btndescartar != null) {
+                btndescartar.Dispose ();
+                btndescartar = null;
+            }
+
+            if (btnEdi != null) {
+                btnEdi.Dispose ();
+                btnEdi = null;
+            }
+
+            if (btnPromover != null) {
+                btnPromover.Dispose ();
+                btnPromover = null;
             }
 
             if (lblNombre != null) {
                 lblNombre.Dispose ();
                 lblNombre = null;
-            }
-
-            if (txtApellidoM != null) {
-                txtApellidoM.Dispose ();
-                txtApellidoM = null;
-            }
-
-            if (txtApellidoP != null) {
-                txtApellidoP.Dispose ();
-                txtApellidoP = null;
             }
 
             if (txtCorreo != null) {
@@ -95,9 +99,19 @@ namespace ListaUsuarios.iOS
                 txtEdad = null;
             }
 
+            if (txtEstado != null) {
+                txtEstado.Dispose ();
+                txtEstado = null;
+            }
+
             if (txtNombre != null) {
                 txtNombre.Dispose ();
                 txtNombre = null;
+            }
+
+            if (txtPais != null) {
+                txtPais.Dispose ();
+                txtPais = null;
             }
 
             if (txtPuesto != null) {

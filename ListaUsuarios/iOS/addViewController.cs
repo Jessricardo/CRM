@@ -33,20 +33,20 @@ namespace ListaUsuarios.iOS
 
 			//Accion al boton
 			btnAddDetalle.TouchUpInside += delegate {
+
 				Contact c1 = new Contact();
 				c1.contactName = txtNombre.Text;
 				c1.contactCellphone = txtTelefono.Text;
 				c1.contactClass = txtPuesto.Text;
-				//c1.contactCountry = txt
 				c1.contactEmail = txtCorreo.Text;
 				c1.contactStreet = txtDireccion.Text;
-				//c1.contactPicture = "";
-					//c1.contactState = ="
+				c1.contactState = txtEstado.Text;
+				c1.contactCountry = txtPais.Text;
 				connection.Crear(c1);
-				UIAlertController okAlertController = UIAlertController.Create("Contacto Agregado", "OK",UIAlertControllerStyle.Alert);
+				UIAlertController okAlertController = UIAlertController.Create("Contacto Agregado", txtNombre.Text,UIAlertControllerStyle.Alert);
 				okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 				this.PresentViewController(okAlertController, true, null);
-
+				this.NavigationController.PopViewController(true);
 			
 			};
 
