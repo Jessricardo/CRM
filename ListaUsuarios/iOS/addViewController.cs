@@ -30,7 +30,7 @@ namespace ListaUsuarios.iOS
 
 			IContactRepository connection = new SQLiteContactRepository(path);
 			//contacto = connection.readById(id);
-
+			txtEdad.Hidden = true;
 			//Accion al boton
 			btnAddDetalle.TouchUpInside += delegate {
 

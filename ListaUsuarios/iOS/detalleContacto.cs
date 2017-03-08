@@ -34,7 +34,9 @@ namespace ListaUsuarios.iOS
 			txtNombre.Text = contacto.contactName;
 			txtCorreo.Text =contacto.contactEmail;
 			txtPuesto.Text = contacto.contactClass;
+			txtPuesto.Enabled = false;
 			txtEdad.Text = "No asignado";
+			txtEdad.Hidden = true;
 			txtDireccion.Text = contacto.contactStreet;
 			txtPais.Text = contacto.contactCountry;
 			txtEstado.Text = contacto.contactState;
@@ -72,6 +74,7 @@ namespace ListaUsuarios.iOS
 				if (c3.contactClass == "3")
 				{
 					c3.contactClass = "2";
+
 					UIAlertController okAlertController = UIAlertController.Create("Contacto Promovido", txtNombre.Text, UIAlertControllerStyle.Alert);
 					okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 					this.PresentViewController(okAlertController, true, null);

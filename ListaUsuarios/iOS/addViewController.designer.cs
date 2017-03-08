@@ -28,6 +28,10 @@ namespace ListaUsuarios.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtEdad { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtEstado { get; set; }
 
         [Outlet]
@@ -57,6 +61,11 @@ namespace ListaUsuarios.iOS
             if (txtDireccion != null) {
                 txtDireccion.Dispose ();
                 txtDireccion = null;
+            }
+
+            if (txtEdad != null) {
+                txtEdad.Dispose ();
+                txtEdad = null;
             }
 
             if (txtEstado != null) {

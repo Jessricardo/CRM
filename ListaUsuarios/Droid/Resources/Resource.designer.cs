@@ -2270,8 +2270,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08001b
 			public const int beginning = 2131230747;
 			
-			// aapt resource value: 0x7f080072
-			public const int botones = 2131230834;
+			// aapt resource value: 0x7f08006a
+			public const int botones = 2131230826;
 			
 			// aapt resource value: 0x7f08002a
 			public const int bottom = 2131230762;
@@ -2354,23 +2354,23 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08005c
 			public const int edit_query = 2131230812;
 			
-			// aapt resource value: 0x7f08006f
-			public const int edtDomicilio = 2131230831;
-			
-			// aapt resource value: 0x7f08006d
-			public const int edtEmail = 2131230829;
-			
-			// aapt resource value: 0x7f080071
-			public const int edtEstado = 2131230833;
-			
-			// aapt resource value: 0x7f08006c
-			public const int edtNombre = 2131230828;
-			
 			// aapt resource value: 0x7f080070
-			public const int edtPais = 2131230832;
+			public const int edtDomicilio = 2131230832;
 			
 			// aapt resource value: 0x7f08006e
-			public const int edtTelefono = 2131230830;
+			public const int edtEmail = 2131230830;
+			
+			// aapt resource value: 0x7f080072
+			public const int edtEstado = 2131230834;
+			
+			// aapt resource value: 0x7f08006d
+			public const int edtNombre = 2131230829;
+			
+			// aapt resource value: 0x7f080071
+			public const int edtPais = 2131230833;
+			
+			// aapt resource value: 0x7f08006f
+			public const int edtTelefono = 2131230831;
 			
 			// aapt resource value: 0x7f08001c
 			public const int end = 2131230748;
@@ -2435,8 +2435,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f0800a8
 			public const int line3 = 2131230888;
 			
-			// aapt resource value: 0x7f08006a
-			public const int linearLayout1 = 2131230826;
+			// aapt resource value: 0x7f08006b
+			public const int linearLayout1 = 2131230827;
 			
 			// aapt resource value: 0x7f080085
 			public const int list = 2131230853;
@@ -2672,8 +2672,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08004d
 			public const int textSpacerNoButtons = 2131230797;
 			
-			// aapt resource value: 0x7f08006b
-			public const int textView1 = 2131230827;
+			// aapt resource value: 0x7f08006c
+			public const int textView1 = 2131230828;
 			
 			// aapt resource value: 0x7f08007f
 			public const int textView3 = 2131230847;
