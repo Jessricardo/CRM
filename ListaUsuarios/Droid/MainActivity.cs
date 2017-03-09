@@ -6,6 +6,7 @@ using Android.Views;
 using System.Collections.Generic;
 using Android.Content;
 using System.IO;
+using com.refractored.fab;
 
 namespace ListaUsuarios.Droid
 {

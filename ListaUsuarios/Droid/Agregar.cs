@@ -42,7 +42,13 @@ namespace ListaUsuarios.Droid
 
         private void Guardar(object sender, EventArgs e)
         {
-			contacto.contactName = edtNombre.Text;
+				contacto.contactName = edtNombre.Text;
+				contacto.contactCellphone = edtTelefono.Text;
+				contacto.contactClass = "3";
+				contacto.contactEmail = edtCorreo.Text;
+				contacto.contactStreet = edtDomicilio.Text;
+				contacto.contactState = edtEstado.Text;
+				contacto.contactCountry = edtPais.Text;
                 db.Crear(contacto);
                 Toast.MakeText(this, "¡Guardado!", ToastLength.Long).Show();
                 StartActivity(typeof(MainActivity));
