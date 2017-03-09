@@ -18,9 +18,10 @@ namespace ListaUsuarios.Droid
 	public class Detalle : Activity
 	{
 		IContactRepository db;
-		Button btnEliminar, btnActualizar;
+		Button btnEliminar, btnActualizar,btnPromover;
 		Contact contacto;
-		EditText nombre, clase, telefono, correo, pais, estado, calle;
+		TextView clase;
+		EditText nombre, telefono, correo, pais, estado, calle;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -33,7 +34,7 @@ namespace ListaUsuarios.Droid
 				db = new SQLiteContactRepository(dbPath);
 				contacto = db.readById(id);
 				nombre = FindViewById<EditText>(Resource.Id.edtNombre);
-				clase = FindViewById<EditText>(Resource.Id.edtPuesto);
+				clase = FindViewById<TextView>(Resource.Id.edtPuesto);
 				telefono = FindViewById<EditText>(Resource.Id.edtTelefono);
 				correo = FindViewById<EditText>(Resource.Id.edtCorreo);
 				pais = FindViewById<EditText>(Resource.Id.edtPais);
@@ -50,9 +51,9 @@ namespace ListaUsuarios.Droid
 			}
 			btnEliminar = FindViewById<Button>(Resource.Id.btnEliminar);
 			btnActualizar = FindViewById<Button>(Resource.Id.btnEditar);
-			btnActualizar.Click += delegate {
-				
-			};
+			btnPromover = FindViewById<Button>(Resource.Id.btnPromover);
+			btnPromover.Click += Promover;
+			btnActualizar.Click += Actualizar;
 			btnEliminar.Click += delegate
 			{
 				AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -75,6 +76,30 @@ namespace ListaUsuarios.Droid
 			};
 
 		}
+
+		void Promover(object sender, EventArgs e)
+		{
+			switch (contacto.contactClass)
+			{
+				case "1":
+					Toast.MakeText(this, "¡No puedes promover más!", ToastLength.Long).Show();
+				break;
+				case "2":
+					contacto.contactClass = "1";
+					db.Update(contacto);
+					Toast.MakeText(this, "¡Promovido a Cliente!", ToastLength.Long).Show();
+					StartActivity(typeof(MainActivity));
+				break;
+				case "3":
+					contacto.contactClass = "2";
+					db.Update(contacto);
+					Toast.MakeText(this, "¡Promovido a Prospecto!", ToastLength.Long).Show();
+					StartActivity(typeof(MainActivity));
+				break;
+					
+			}
+		}
+
 		private void Actualizar(object sender, EventArgs e)
 		{
 			contacto.contactName = nombre.Text;

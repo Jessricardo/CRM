@@ -2290,8 +2290,8 @@ namespace ListaUsuarios.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08009f
-			public const int action0 = 2131230879;
+			// aapt resource value: 0x7f0800a2
+			public const int action0 = 2131230882;
 			
 			// aapt resource value: 0x7f08005a
 			public const int action_bar = 2131230810;
@@ -2317,8 +2317,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08005b
 			public const int action_context_bar = 2131230811;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int action_divider = 2131230883;
+			// aapt resource value: 0x7f0800a6
+			public const int action_divider = 2131230886;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2353,11 +2353,14 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08002a
 			public const int bottom = 2131230762;
 			
-			// aapt resource value: 0x7f080083
-			public const int btnEditar = 2131230851;
+			// aapt resource value: 0x7f080088
+			public const int btnAgregar = 2131230856;
 			
-			// aapt resource value: 0x7f080084
-			public const int btnEliminar = 2131230852;
+			// aapt resource value: 0x7f080085
+			public const int btnEditar = 2131230853;
+			
+			// aapt resource value: 0x7f080086
+			public const int btnEliminar = 2131230854;
 			
 			// aapt resource value: 0x7f080074
 			public const int btnGuardar = 2131230836;
@@ -2365,11 +2368,14 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f080073
 			public const int btnLimpiar = 2131230835;
 			
+			// aapt resource value: 0x7f080084
+			public const int btnPromover = 2131230852;
+			
 			// aapt resource value: 0x7f080044
 			public const int buttonPanel = 2131230788;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int cancel_action = 2131230880;
+			// aapt resource value: 0x7f0800a3
+			public const int cancel_action = 2131230883;
 			
 			// aapt resource value: 0x7f08002b
 			public const int center = 2131230763;
@@ -2383,8 +2389,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f080052
 			public const int checkbox = 2131230802;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int chronometer = 2131230886;
+			// aapt resource value: 0x7f0800a9
+			public const int chronometer = 2131230889;
 			
 			// aapt resource value: 0x7f080033
 			public const int clip_horizontal = 2131230771;
@@ -2431,11 +2437,11 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08005c
 			public const int edit_query = 2131230812;
 			
-			// aapt resource value: 0x7f080082
-			public const int edtCalle = 2131230850;
+			// aapt resource value: 0x7f080083
+			public const int edtCalle = 2131230851;
 			
-			// aapt resource value: 0x7f080081
-			public const int edtCorreo = 2131230849;
+			// aapt resource value: 0x7f080082
+			public const int edtCorreo = 2131230850;
 			
 			// aapt resource value: 0x7f080070
 			public const int edtDomicilio = 2131230832;
@@ -2452,8 +2458,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f080071
 			public const int edtPais = 2131230833;
 			
-			// aapt resource value: 0x7f08007f
-			public const int edtPuesto = 2131230847;
+			// aapt resource value: 0x7f080080
+			public const int edtPuesto = 2131230848;
 			
 			// aapt resource value: 0x7f08006f
 			public const int edtTelefono = 2131230831;
@@ -2461,8 +2467,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08001c
 			public const int end = 2131230748;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int end_padder = 2131230891;
+			// aapt resource value: 0x7f0800ae
+			public const int end_padder = 2131230894;
 			
 			// aapt resource value: 0x7f080023
 			public const int enterAlways = 2131230755;
@@ -2506,8 +2512,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08003f
 			public const int image = 2131230783;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int info = 2131230890;
+			// aapt resource value: 0x7f0800ad
+			public const int info = 2131230893;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
@@ -2515,17 +2521,17 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08002f
 			public const int left = 2131230767;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int line1 = 2131230884;
+			// aapt resource value: 0x7f0800a7
+			public const int line1 = 2131230887;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int line3 = 2131230888;
+			// aapt resource value: 0x7f0800ab
+			public const int line3 = 2131230891;
 			
 			// aapt resource value: 0x7f08006b
 			public const int linearLayout1 = 2131230827;
 			
-			// aapt resource value: 0x7f080085
-			public const int list = 2131230853;
+			// aapt resource value: 0x7f080087
+			public const int list = 2131230855;
 			
 			// aapt resource value: 0x7f08000b
 			public const int listMode = 2131230731;
@@ -2533,8 +2539,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f080041
 			public const int list_item = 2131230785;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int media_actions = 2131230882;
+			// aapt resource value: 0x7f0800a5
+			public const int media_actions = 2131230885;
 			
 			// aapt resource value: 0x7f08001d
 			public const int middle = 2131230749;
@@ -2542,77 +2548,77 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f080037
 			public const int mini = 2131230775;
 			
-			// aapt resource value: 0x7f080091
-			public const int mr_art = 2131230865;
-			
-			// aapt resource value: 0x7f080086
-			public const int mr_chooser_list = 2131230854;
+			// aapt resource value: 0x7f080094
+			public const int mr_art = 2131230868;
 			
 			// aapt resource value: 0x7f080089
-			public const int mr_chooser_route_desc = 2131230857;
-			
-			// aapt resource value: 0x7f080087
-			public const int mr_chooser_route_icon = 2131230855;
-			
-			// aapt resource value: 0x7f080088
-			public const int mr_chooser_route_name = 2131230856;
-			
-			// aapt resource value: 0x7f08008e
-			public const int mr_close = 2131230862;
-			
-			// aapt resource value: 0x7f080094
-			public const int mr_control_divider = 2131230868;
-			
-			// aapt resource value: 0x7f08009a
-			public const int mr_control_play_pause = 2131230874;
-			
-			// aapt resource value: 0x7f08009d
-			public const int mr_control_subtitle = 2131230877;
-			
-			// aapt resource value: 0x7f08009c
-			public const int mr_control_title = 2131230876;
-			
-			// aapt resource value: 0x7f08009b
-			public const int mr_control_title_container = 2131230875;
-			
-			// aapt resource value: 0x7f08008f
-			public const int mr_custom_control = 2131230863;
-			
-			// aapt resource value: 0x7f080090
-			public const int mr_default_control = 2131230864;
-			
-			// aapt resource value: 0x7f08008b
-			public const int mr_dialog_area = 2131230859;
-			
-			// aapt resource value: 0x7f08008a
-			public const int mr_expandable_area = 2131230858;
-			
-			// aapt resource value: 0x7f08009e
-			public const int mr_group_expand_collapse = 2131230878;
-			
-			// aapt resource value: 0x7f080092
-			public const int mr_media_main_control = 2131230866;
-			
-			// aapt resource value: 0x7f08008d
-			public const int mr_name = 2131230861;
-			
-			// aapt resource value: 0x7f080093
-			public const int mr_playback_control = 2131230867;
+			public const int mr_chooser_list = 2131230857;
 			
 			// aapt resource value: 0x7f08008c
-			public const int mr_title_bar = 2131230860;
+			public const int mr_chooser_route_desc = 2131230860;
+			
+			// aapt resource value: 0x7f08008a
+			public const int mr_chooser_route_icon = 2131230858;
+			
+			// aapt resource value: 0x7f08008b
+			public const int mr_chooser_route_name = 2131230859;
+			
+			// aapt resource value: 0x7f080091
+			public const int mr_close = 2131230865;
+			
+			// aapt resource value: 0x7f080097
+			public const int mr_control_divider = 2131230871;
+			
+			// aapt resource value: 0x7f08009d
+			public const int mr_control_play_pause = 2131230877;
+			
+			// aapt resource value: 0x7f0800a0
+			public const int mr_control_subtitle = 2131230880;
+			
+			// aapt resource value: 0x7f08009f
+			public const int mr_control_title = 2131230879;
+			
+			// aapt resource value: 0x7f08009e
+			public const int mr_control_title_container = 2131230878;
+			
+			// aapt resource value: 0x7f080092
+			public const int mr_custom_control = 2131230866;
+			
+			// aapt resource value: 0x7f080093
+			public const int mr_default_control = 2131230867;
+			
+			// aapt resource value: 0x7f08008e
+			public const int mr_dialog_area = 2131230862;
+			
+			// aapt resource value: 0x7f08008d
+			public const int mr_expandable_area = 2131230861;
+			
+			// aapt resource value: 0x7f0800a1
+			public const int mr_group_expand_collapse = 2131230881;
 			
 			// aapt resource value: 0x7f080095
-			public const int mr_volume_control = 2131230869;
+			public const int mr_media_main_control = 2131230869;
+			
+			// aapt resource value: 0x7f080090
+			public const int mr_name = 2131230864;
 			
 			// aapt resource value: 0x7f080096
-			public const int mr_volume_group_list = 2131230870;
+			public const int mr_playback_control = 2131230870;
+			
+			// aapt resource value: 0x7f08008f
+			public const int mr_title_bar = 2131230863;
 			
 			// aapt resource value: 0x7f080098
-			public const int mr_volume_item_icon = 2131230872;
+			public const int mr_volume_control = 2131230872;
 			
 			// aapt resource value: 0x7f080099
-			public const int mr_volume_slider = 2131230873;
+			public const int mr_volume_group_list = 2131230873;
+			
+			// aapt resource value: 0x7f08009b
+			public const int mr_volume_item_icon = 2131230875;
+			
+			// aapt resource value: 0x7f08009c
+			public const int mr_volume_slider = 2131230876;
 			
 			// aapt resource value: 0x7f080016
 			public const int multiply = 2131230742;
@@ -2643,6 +2649,9 @@ namespace ListaUsuarios.Droid
 			
 			// aapt resource value: 0x7f080007
 			public const int progress_horizontal = 2131230727;
+			
+			// aapt resource value: 0x7f08007e
+			public const int promover = 2131230846;
 			
 			// aapt resource value: 0x7f080054
 			public const int radio = 2131230804;
@@ -2740,8 +2749,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f080031
 			public const int start = 2131230769;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int status_bar_latest_event_content = 2131230881;
+			// aapt resource value: 0x7f0800a4
+			public const int status_bar_latest_event_content = 2131230884;
 			
 			// aapt resource value: 0x7f080065
 			public const int submit_area = 2131230821;
@@ -2749,11 +2758,11 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08000d
 			public const int tabMode = 2131230733;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int text = 2131230889;
+			// aapt resource value: 0x7f0800ac
+			public const int text = 2131230892;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int text2 = 2131230887;
+			// aapt resource value: 0x7f0800aa
+			public const int text2 = 2131230890;
 			
 			// aapt resource value: 0x7f08004d
 			public const int textSpacerNoButtons = 2131230797;
@@ -2761,17 +2770,17 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08006c
 			public const int textView1 = 2131230828;
 			
-			// aapt resource value: 0x7f08007e
-			public const int textView3 = 2131230846;
+			// aapt resource value: 0x7f08007f
+			public const int textView3 = 2131230847;
 			
-			// aapt resource value: 0x7f080080
-			public const int textView5 = 2131230848;
+			// aapt resource value: 0x7f080081
+			public const int textView5 = 2131230849;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int textView_contact_name = 2131230892;
+			// aapt resource value: 0x7f0800af
+			public const int textView_contact_name = 2131230895;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int time = 2131230885;
+			// aapt resource value: 0x7f0800a8
+			public const int time = 2131230888;
 			
 			// aapt resource value: 0x7f080043
 			public const int title = 2131230787;
@@ -2800,8 +2809,8 @@ namespace ListaUsuarios.Droid
 			// aapt resource value: 0x7f08000a
 			public const int view_offset_helper = 2131230730;
 			
-			// aapt resource value: 0x7f080097
-			public const int volume_item_container = 2131230871;
+			// aapt resource value: 0x7f08009a
+			public const int volume_item_container = 2131230874;
 			
 			// aapt resource value: 0x7f080022
 			public const int withText = 2131230754;

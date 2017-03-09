@@ -16,6 +16,7 @@ namespace ListaUsuarios.Droid
 		IContactRepository db;
 		List<Contact> contactsItems;
 		ListView list;
+		Button btnAgregar;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -24,9 +25,12 @@ namespace ListaUsuarios.Droid
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbCRM.db3");
             db = new SQLiteContactRepository(dbPath);
             list = this.FindViewById<ListView>(Resource.Id.list);
+			btnAgregar = this.FindViewById<Button>(Resource.Id.btnAgregar);
             contactsItems = db.Read();
 			list.Adapter = new ContactsAdapter(this, contactsItems);
-
+			btnAgregar.Click += delegate {
+				StartActivity(typeof(Agregar));
+			};
 			list.ItemClick += MyListView_ItemClick;
             
            
