@@ -3,6 +3,7 @@ using Foundation;
 using UIKit;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ListaUsuarios.iOS
 {
@@ -16,6 +17,7 @@ namespace ListaUsuarios.iOS
 
 		string CellIdentifier = "TableCell";
 		UIViewController owner;
+		TableSourceViewController owner1;
 		public TableSourceViewController(List<Contact> items, UIViewController owner)
 		{
 			TableItems = items;
@@ -23,7 +25,19 @@ namespace ListaUsuarios.iOS
 
 
 		}
+		public TableSourceViewController(List<Contact> items, TableSourceViewController owner1)
+		{
+			TableItems = items;
+			this.owner1 = owner1;
 
+
+		}
+		public void actualizar()
+		{
+			var table = new UITableView();
+			table.Source = new TableSourceViewController(TableItems, this);
+			table.ReloadData();
+		}
 		public override nint RowsInSection(UITableView tableview, nint section)
 		{
 			return TableItems.Count;
@@ -40,7 +54,7 @@ namespace ListaUsuarios.iOS
 			if (cell == null)
 			{ cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier); }
 
-			string nombreCompleto = item.nombre + " " + item.apellidoP;
+			string nombreCompleto = item.contactName;
 			cell.TextLabel.Text = nombreCompleto;
 			cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
 
@@ -53,14 +67,7 @@ namespace ListaUsuarios.iOS
 			//okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 			detalleContacto next = owner.Storyboard.InstantiateViewController("detalleContacto") as detalleContacto;
 			//Console.WriteLine(">>>"+TableItems[indexPath.Row].nombre);
-			next.nombre = TableItems[indexPath.Row].nombre;
-			next.apellidoP = TableItems[indexPath.Row].apellidoP;
-			next.apellidoM = TableItems[indexPath.Row].apellidoM;
-			next.correo = TableItems[indexPath.Row].correo;
-			next.direccion = TableItems[indexPath.Row].direccion;
-			next.edad = TableItems[indexPath.Row].edad;
-			next.telefono = TableItems[indexPath.Row].telefono;
-			next.puesto = TableItems[indexPath.Row].puesto;
+			next.id = TableItems[indexPath.Row].contactId;
 			owner.NavigationController.PushViewController(next,true);
 			tableView.DeselectRow(indexPath, true);
 			//owner.PresentViewController(okAlertController, true, null);
@@ -69,7 +76,7 @@ namespace ListaUsuarios.iOS
 
 		public override void AccessoryButtonTapped(UITableView tableView, NSIndexPath indexPath)
 		{
-			UIAlertController okAlertController = UIAlertController.Create("Contacto seleccionado", TableItems[indexPath.Row].nombre, UIAlertControllerStyle.Alert);
+			UIAlertController okAlertController = UIAlertController.Create("Contacto seleccionado", TableItems[indexPath.Row].contactName, UIAlertControllerStyle.Alert);
 			okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 			owner.PresentViewController(okAlertController, true, null);
 
@@ -85,12 +92,21 @@ namespace ListaUsuarios.iOS
 			{
 				case UITableViewCellEditingStyle.Delete:
 					// remove the item from the underlying data source
-					TableItems.RemoveAt(indexPath.Row);
+					var fileName = "dbCRM.db3";
+					var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+					var libraryPath = Path.Combine(documentsPath, "..", "Library");
+					var path = Path.Combine(libraryPath, fileName);
+					IContactRepository a = new SQLiteContactRepository(path);
+
+					Contact c = TableItems[indexPath.Row];
+					a.Delete(c);
 					// delete the row from the table
+					TableItems.RemoveAt(indexPath.Row);
 					tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
-					break;
+
+				break;
 				case UITableViewCellEditingStyle.None:
-					Console.WriteLine("Borrar: " + TableItems[indexPath.Row].nombre);
+					Console.WriteLine("Borrar: " + TableItems[indexPath.Row].contactName);
 					break;
 			}
 		}
@@ -100,7 +116,7 @@ namespace ListaUsuarios.iOS
 		}
 		public override string TitleForDeleteConfirmation(UITableView tableView, NSIndexPath indexPath)
 		{   // Optional - default text is 'Delete'
-			return "Borrar (" + TableItems[indexPath.Row].nombre + ")";
+			return "Borrar (" + TableItems[indexPath.Row].contactName + ")";
 		}
 
 	//	public override UITableViewCellEditingStyle EditingStyleForRow(UITableView

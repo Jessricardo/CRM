@@ -6,6 +6,7 @@ using Android.Views;
 using System.Collections.Generic;
 using Android.Content;
 using System.IO;
+using com.refractored.fab;
 
 namespace ListaUsuarios.Droid
 {
@@ -14,6 +15,8 @@ namespace ListaUsuarios.Droid
 	{
 		IContactRepository db;
 		List<Contact> contactsItems;
+		ListView list;
+		Button btnAgregar;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -21,10 +24,13 @@ namespace ListaUsuarios.Droid
 			SetContentView(Resource.Layout.Main);
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbCRM.db3");
             db = new SQLiteContactRepository(dbPath);
-            var list = this.FindViewById<ListView>(Resource.Id.list);
+            list = this.FindViewById<ListView>(Resource.Id.list);
+			btnAgregar = this.FindViewById<Button>(Resource.Id.btnAgregar);
             contactsItems = db.Read();
 			list.Adapter = new ContactsAdapter(this, contactsItems);
-
+			btnAgregar.Click += delegate {
+				StartActivity(typeof(Agregar));
+			};
 			list.ItemClick += MyListView_ItemClick;
             
            

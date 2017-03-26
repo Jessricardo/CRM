@@ -1,62 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="15dp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="Nombre"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_above="@+id/promover"
+        android:id="@+id/scroll">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="Nombre"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtNombre" />
+            <TextView
+                android:text="Puesto"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtPuesto" />
+            <TextView
+                android:text="Telefono"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtTelefono" />
+            <TextView
+                android:text="Correo"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtCorreo" />
+            <TextView
+                android:text="Dirección"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtCalle" />
+            <TextView
+                android:text="Pais"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtPais" />
+            <TextView
+                android:text="Estado"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtEstado" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:id="@+id/promover"
+        android:layout_above="@+id/botones"
+        android:orientation="horizontal">
+        <Button
+            android:text="Promover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnPromover"
+            android:background="#ff81c784"
+            android:textColor="#fffafafa"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_margin="5dp"
+            android:elevation="2dp" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtNombre" />
-    <TextView
-        android:text="Clase"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtClase" />
-    <TextView
-        android:text="Telefono"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtNumero" />
-    <Button
-        android:text="Editar"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/botones"
         android:layout_alignParentBottom="true"
-        android:id="@+id/btnEditar"
-        android:background="#ff4db6ac"
-        android:textColor="#fffafafa"
-        style="@style/AlertDialog.AppCompat" />
-    <Button
-        android:text="Eliminar"
-        android:layout_marginTop="7dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnEliminar"
-        android:background="#ffef5350"
-        android:textColor="#fffafafa"
-        style="@style/Theme.AppCompat.NoActionBar" />
-</LinearLayout>
+        android:orientation="horizontal">
+        <Button
+            android:text="Actualizar"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEditar"
+            android:background="#ff4db6ac"
+            android:textColor="#fffafafa"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_margin="5dp"
+            android:elevation="2dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            android:text="X"
+            android:id="@+id/btnEliminar"
+            android:background="#ffe57373"
+            android:layout_margin="5dp"
+            android:textColor="#fffafafa"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:textSize="20sp"
+            android:typeface="monospace"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Material.Button" />
+    </LinearLayout>
+</RelativeLayout>

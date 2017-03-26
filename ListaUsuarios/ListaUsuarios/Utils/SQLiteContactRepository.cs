@@ -39,7 +39,7 @@ namespace ListaUsuarios
 
 		public void Update(Contact c) 
 		{
-			throw new NotImplementedException();
+			db.Update(c);
 		}
 	}
 }

@@ -166,7 +166,6 @@
     <Compile Include="TableSourceViewController.designer.cs">
       <DependentUpon>TableSourceViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contact.cs" />
     <Compile Include="detallesContacts.cs" />
     <Compile Include="detallesContacts.designer.cs">
       <DependentUpon>detallesContacts.cs</DependentUpon>
@@ -178,6 +177,10 @@
     <Compile Include="TableContactViewController.cs" />
     <Compile Include="TableContactViewController.designer.cs">
       <DependentUpon>TableContactViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addViewController.cs" />
+    <Compile Include="addViewController.designer.cs">
+      <DependentUpon>addViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

@@ -11,24 +11,12 @@ using UIKit;
 
 namespace ListaUsuarios.iOS
 {
-    [Register ("detalleContacto")]
-    partial class detalleContacto
+    [Register ("addViewController")]
+    partial class addViewController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btndescartar { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnEdi { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnPromover { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel lblNombre { get; set; }
+        UIKit.UIButton btnAddDetalle { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -56,32 +44,13 @@ namespace ListaUsuarios.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtPuesto { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtTelefono { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (btndescartar != null) {
-                btndescartar.Dispose ();
-                btndescartar = null;
-            }
-
-            if (btnEdi != null) {
-                btnEdi.Dispose ();
-                btnEdi = null;
-            }
-
-            if (btnPromover != null) {
-                btnPromover.Dispose ();
-                btnPromover = null;
-            }
-
-            if (lblNombre != null) {
-                lblNombre.Dispose ();
-                lblNombre = null;
+            if (btnAddDetalle != null) {
+                btnAddDetalle.Dispose ();
+                btnAddDetalle = null;
             }
 
             if (txtCorreo != null) {
@@ -112,11 +81,6 @@ namespace ListaUsuarios.iOS
             if (txtPais != null) {
                 txtPais.Dispose ();
                 txtPais = null;
-            }
-
-            if (txtPuesto != null) {
-                txtPuesto.Dispose ();
-                txtPuesto = null;
             }
 
             if (txtTelefono != null) {
